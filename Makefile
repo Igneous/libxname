@@ -19,7 +19,7 @@ install: xname
 
 xname: xname.o
 	@echo "==> Linking (xname.o -> libxname.so)"
-	gcc -shared -Wl,-soname,libxname.so -o libxname.so xname.o
+	gcc -shared -Wl,-soname,libxname.so -lX11 -o libxname.so xname.o
 	@echo "==> Stripping libxname.so"
 	strip -v libxname.so
 
