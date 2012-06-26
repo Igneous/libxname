@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void xname(char *msg)
+int xname(const char *msg)
 {
 	Display *dpy;
 	Window rootwin;
@@ -19,5 +19,7 @@ void xname(char *msg)
 	XStoreName(dpy, rootwin, msg);
 
 	XCloseDisplay(dpy);
+
+	return 0;
 
 }

@@ -1,1 +1,1 @@
-extern void xname(char *msg);
+extern int xname(const char *msg);
